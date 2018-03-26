@@ -11,6 +11,7 @@
 @implementation BQHttpTool
 static AFHTTPSessionManager *manager;
 
+/* 封装成 单例会话管理者 */
 + (AFHTTPSessionManager *)sharedManager {
     
     static dispatch_once_t onceToken;
