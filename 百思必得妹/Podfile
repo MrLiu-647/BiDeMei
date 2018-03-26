@@ -1,0 +1,15 @@
+platform :ios, '8.0'
+target :百思必得妹 do
+
+pod 'AFNetworking', '~> 3.2.0'
+pod 'MJExtension', '~> 3.0.13'
+pod 'SDWebImage', '~> 4.3.2’
+pod 'SDWebImage/GIF'
+pod 'FLAnimatedImage'
+pod 'SVProgressHUD', '~> 2.2.5’
+pod 'MBProgressHUD', '~> 1.1.0'
+pod 'Masonry', '~> 1.1.0'
+pod 'KTVHTTPCache', '~> 1.0.0'
+pod 'MJRefresh'
+
+end

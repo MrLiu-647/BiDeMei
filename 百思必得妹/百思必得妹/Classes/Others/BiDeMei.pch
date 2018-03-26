@@ -1,0 +1,91 @@
+//
+//  BiDeMei.pch
+//  百思必得妹
+//
+//  Created by 刘思齐 on 2018/1/17.
+//  Copyright © 2018年 刘思齐. All rights reserved.
+//
+
+/*
+ 功能：
+ 1. 存放公用宏
+ 2. 存放公用头文件
+ 3. 自定义Log
+ */
+
+#ifndef BiDeMei_pch
+#define BiDeMei_pch
+/******************************************开始*********************************************/
+
+
+
+/***********************Masonry**************************/
+//define this constant if you want to enable auto-boxing for default syntax
+#define MAS_SHORTHAND_GLOBALS
+//define this constant if you want to enable auto-boxing for default syntax
+#define MAS_SHORTHAND_GLOBALS
+/********************************************************/
+
+
+
+
+
+/***********************头文件****************************/
+#import "UIBarButtonItem+item.h"
+#import "UIView+frame.h"
+#import "UIImage+image.h"
+#import "UIImageView+download.h"
+
+/********************************************************/
+
+
+
+
+/***********************常量区****************************/
+#define BQTitlesViewH 35/** 标题栏的高度 */
+#define BQTabBarH 49    /** UITabBar的高度 */
+#define BQNavMaxY 64    /** 导航栏的最大Y值 */
+#define BQMargin 10      /** 全局统一的间距 */
+#define BQTabBarButtonDidRepeatClickNotification @"BQTabBarButtonDidRepeatClickNotification"
+#define BQTitleButtonDidRepeatClickNotification @"BQTitleButtonDidRepeatClickNotification"
+#define BQCommonURL @"http://api.budejie.com/api/api_open.php"  /** 统一的一个请求路径 */
+/********************************************************/
+
+
+
+
+/***********************便捷功能***************************/
+#ifdef DEBUG    // 调试阶段
+#define BQLog(...) NSLog(__VA_ARGS__);
+#else   // 发布阶段
+#define BQLog(...)
+#endif
+
+#define BQFunc() NSLog(@"%s",__func__);
+
+#define BQAFNWriteToPlist(fileName) [responseObject writeToFile:[NSString stringWithFormat:@"/Users/Liu/Desktop/百思必得妹/%@.plist",@#fileName] atomically:YES];
+
+#define BQGrayColor(v) BQColor(v,v,v)
+#define BQColor(r,g,b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+#define BQRandomColor BQColor(arc4random_uniform(255), arc4random_uniform(255), arc4random_uniform(255))
+/*******************************************************/
+
+
+
+
+
+/***********************屏幕适配**************************/
+#define BQScreenH [UIScreen mainScreen].bounds.size.height
+#define BQScreenW [UIScreen mainScreen].bounds.size.width
+#define iPhone6p (BQScreenH == 736)
+#define iPhone6 (BQScreenH == 667)
+#define iPhone5 (BQScreenH == 568)
+#define iPhone4 (BQScreenH == 480)
+/********************************************************/
+
+
+
+
+/******************************************结束*********************************************/
+#endif /* BiDeMei_pch */
+

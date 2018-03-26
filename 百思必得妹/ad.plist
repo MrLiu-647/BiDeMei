@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ad</key>
+	<array/>
+	<key>error_code</key>
+	<integer>0</integer>
+	<key>iap_buy</key>
+	<integer>0</integer>
+	<key>n</key>
+	<integer>0</integer>
+	<key>qk</key>
+	<string>e5da67a95b65d596</string>
+	<key>req_id</key>
+	<string></string>
+</dict>
+</plist>

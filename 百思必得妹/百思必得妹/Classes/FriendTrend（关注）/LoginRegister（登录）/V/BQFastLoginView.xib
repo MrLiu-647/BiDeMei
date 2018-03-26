@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="BQFastLoginView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XCt-Gn-cfA" customClass="BQFastLoginBtn">
+                    <rect key="frame" x="0.0" y="20" width="125" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="SKa-VT-VWk"/>
+                    </constraints>
+                    <state key="normal" title="QQ登录" image="login_QQ_icon"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gvu-w1-kCK" customClass="BQFastLoginBtn">
+                    <rect key="frame" x="125" y="20" width="125" height="100"/>
+                    <state key="normal" title="微博登录" image="login_sina_icon"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SQl-Aa-MsY" customClass="BQFastLoginBtn">
+                    <rect key="frame" x="250" y="20" width="125" height="100"/>
+                    <state key="normal" title="腾讯微博" image="login_tecent_icon"/>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="快速登录" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M3m-4c-k0S">
+                    <rect key="frame" x="155" y="0.0" width="66" height="19.5"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="66" id="HP4-Js-D4V"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_register_left_line" translatesAutoresizingMaskIntoConstraints="NO" id="bnX-qU-CVt">
+                    <rect key="frame" x="0.0" y="0.0" width="155" height="21"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_register_right_line" translatesAutoresizingMaskIntoConstraints="NO" id="cGA-6u-iDn">
+                    <rect key="frame" x="221" y="0.0" width="154" height="20"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="XCt-Gn-cfA" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="8To-DH-nuB"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="XCt-Gn-cfA" secondAttribute="bottom" id="Aqd-Rc-hCY"/>
+                <constraint firstItem="SQl-Aa-MsY" firstAttribute="top" secondItem="cGA-6u-iDn" secondAttribute="bottom" id="BRq-be-Ey9"/>
+                <constraint firstItem="gvu-w1-kCK" firstAttribute="height" secondItem="XCt-Gn-cfA" secondAttribute="height" id="CPI-S9-1fG"/>
+                <constraint firstItem="M3m-4c-k0S" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="DOq-h9-HYe"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="SQl-Aa-MsY" secondAttribute="bottom" id="Gpj-ZR-tGn"/>
+                <constraint firstAttribute="trailing" secondItem="SQl-Aa-MsY" secondAttribute="trailing" id="IVO-P6-SrX"/>
+                <constraint firstItem="SQl-Aa-MsY" firstAttribute="width" secondItem="gvu-w1-kCK" secondAttribute="width" id="PSV-Z9-5my"/>
+                <constraint firstItem="gvu-w1-kCK" firstAttribute="leading" secondItem="XCt-Gn-cfA" secondAttribute="trailing" id="QZW-yp-312"/>
+                <constraint firstItem="bnX-qU-CVt" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="R2o-mw-f1s"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="bnX-qU-CVt" secondAttribute="bottom" constant="99" id="SMt-oC-wEA"/>
+                <constraint firstItem="M3m-4c-k0S" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Vmf-bj-iIg"/>
+                <constraint firstItem="bnX-qU-CVt" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="YDR-5O-yIk"/>
+                <constraint firstItem="gvu-w1-kCK" firstAttribute="width" secondItem="XCt-Gn-cfA" secondAttribute="width" id="Zy2-tR-z6J"/>
+                <constraint firstItem="cGA-6u-iDn" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="c5t-dl-dqY"/>
+                <constraint firstItem="cGA-6u-iDn" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="hn7-w6-9FV"/>
+                <constraint firstItem="gvu-w1-kCK" firstAttribute="leading" secondItem="XCt-Gn-cfA" secondAttribute="trailing" id="jgy-Y4-R1B"/>
+                <constraint firstItem="cGA-6u-iDn" firstAttribute="leading" secondItem="M3m-4c-k0S" secondAttribute="trailing" id="sXf-km-Y5h"/>
+                <constraint firstItem="SQl-Aa-MsY" firstAttribute="leading" secondItem="gvu-w1-kCK" secondAttribute="trailing" id="xLc-Gd-Vai"/>
+                <constraint firstItem="M3m-4c-k0S" firstAttribute="leading" secondItem="bnX-qU-CVt" secondAttribute="trailing" id="xYu-dt-1fv"/>
+                <constraint firstItem="SQl-Aa-MsY" firstAttribute="height" secondItem="gvu-w1-kCK" secondAttribute="height" id="yuE-jm-SaE"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="gvu-w1-kCK" secondAttribute="bottom" id="zO1-zU-ggp"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="72" y="-333"/>
+        </view>
+        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="LF3-Sh-DTj">
+            <rect key="frame" x="0.0" y="0.0" width="135" height="54"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <point key="canvasLocation" x="263" y="-523"/>
+        </imageView>
+    </objects>
+    <resources>
+        <image name="login_QQ_icon" width="70" height="70"/>
+        <image name="login_register_left_line" width="1" height="1"/>
+        <image name="login_register_right_line" width="1" height="1"/>
+        <image name="login_sina_icon" width="70" height="70"/>
+        <image name="login_tecent_icon" width="70" height="70"/>
+    </resources>
+</document>
