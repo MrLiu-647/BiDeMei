@@ -130,14 +130,6 @@ static NSString * const BQTopicCellId = @"BQTopicCell";
         self.maxtime = responseObject[@"info"][@"maxtime"];     //存储maxtime
         self.topics = [BQTopic mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];   // 字典数组 -> 模型数据
         
-        //        NSMutableArray *newTopics = [BQTopic mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];   // 字典数组 -> 模型数据
-        //        if (self.topics) {
-        //            [self.topics insertObjects:newTopics atIndexes:[NSIndexSet indexSetWithIndex:0]];   //新数据到第一个位置
-        //        } else {    // 没有数据就直接赋值
-        //            self.topics = newTopics;
-        //        }
-        
-        
         [self.tableView reloadData];    // 刷新表格
         [self.tableView.mj_header endRefreshing];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {

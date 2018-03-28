@@ -159,28 +159,9 @@
     _scrollView = scrollView;
     [self.view addSubview:scrollView];
     
-    /*
-    for (NSInteger i = 0; i < 5; i++) {
-        UITableView *tableView = [[UITableView alloc] init];
-        tableView.bq_width = scrollView.bq_width;
-        tableView.bq_height = scrollView.bq_height;
-        tableView.bq_y = 0;
-        tableView.bq_x = i * scrollView.bq_width;
-        tableView.backgroundColor = BQRandomColor;
-        [scrollView addSubview:tableView];
-    }
-     */
     
     NSInteger count = self.childViewControllers.count;  //子控制器的个数
     CGFloat scrollViewW = scrollView.bq_width;
-//    CGFloat scrollViewH = scrollView.bq_height;
-//
-//    for (NSInteger i = 0; i < count; i++) {
-//        //取出i位置自控制器的view
-//        UIView *childVcView = self.childViewControllers[i].view;    // 提前创建好所有控制器，性能不好..
-//        childVcView.frame = CGRectMake(i * scrollViewW, 0, scrollViewW, scrollViewH);
-//        [scrollView addSubview:childVcView];
-//    }
     
     scrollView.contentSize = CGSizeMake(count * scrollViewW, 0);
 }

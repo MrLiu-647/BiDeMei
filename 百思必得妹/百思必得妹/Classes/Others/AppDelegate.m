@@ -39,48 +39,23 @@
     2）直接往窗口上再加上一个广告界面，等几秒钟过去了，再把广告界面移除
  */
 
-@interface AppDelegate () // <UITabBarDelegate> //第二种方法监听tabBar按钮点击 设置代理
+@interface AppDelegate ()
 
 @end
 
 @implementation AppDelegate
-#pragma mark - <UITabBarControllerDelegate>
-/**
- *  当tabBarController选中了某个子控制器的时候调用（点击了tabBar里面按钮的时候）
- */
-//- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController
-//{
-//    BQLog(@"didSelectViewController - %@", viewController);
-//}
-
-/*
- #pragma mark - 监听点击
- - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
- {
- if ([touches.anyObject locationInView:nil].y <= 20) {
- XMGLog(@"点击了状态栏")
- }
- }
- */
 
 #pragma mark - <UIApplicationDelegate>
 // 程序启动的时候就会调用
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-//    BQLog(@"%@",NSStringFromCGRect([UIScreen mainScreen].bounds));
-    // 1.创建窗口
-//    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    
-    // 2.设置窗口根控制器
+
     BQAdViewController *adVc = [[BQAdViewController alloc] init];
     self.window.rootViewController = adVc;
     
-    // 3.显示窗口: 1)成为UIApplication主窗口
-//    [self.window makeKeyAndVisible];
-    
-    // 4.开始监控网络状况
+    // 开始监控网络状况
     [[AFNetworkReachabilityManager sharedManager] startMonitoring];
     
-    // 5.启动KTV缓存框架
+    // 启动KTV缓存框架
     NSError * error;
     [KTVHTTPCache proxyStart:&error];
     if (error) {
