@@ -11,18 +11,18 @@
 
 ## 项目进展：
 目前已完成70%基本功能：其中包括
-1.启动广告动画
-2.登录、注册界面
-3.tableView新闻展示：分为五个小模块：全部、视频、音频、图片、段子。（基于AFN、SDWeb、MJExtension框架）
-4.视频、音频播放（基于KTVHTTPCash框架）
-5.下拉刷新，上拉加载更多数据（基于MJRefresh框架）
-6.定期清除过期图片、音频、视频缓存
+- 1.启动广告动画
+- 2.登录、注册界面
+- 3.tableView新闻展示：分为五个小模块：全部、视频、音频、图片、段子。（基于AFN、SDWeb、MJExtension框架）
+- 4.视频、音频播放（基于KTVHTTPCash框架）
+- 5.下拉刷新，上拉加载更多数据（基于MJRefresh框架）
+- 6.定期清除过期图片、音频、视频缓存
 
 ## 未来展望（优化）：
-1.利用UICollectionView + UITableView 组合，对UITableView循环利用，减少内存开销。
-2.对UITableView滑动优化，减少卡顿，提高性能
-3.接入第三方登录接口，实现登录注册功能
-4.发帖功能
+- 1.利用UICollectionView + UITableView 组合，对UITableView循环利用，减少内存开销。
+- 2.对UITableView滑动优化，减少卡顿，提高性能
+- 3.接入第三方登录接口，实现登录注册功能
+- 4.发帖功能
 
 ## 总结：
 该项目是本人对iOS中各个知识点的整理过程，
