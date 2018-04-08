@@ -59,8 +59,6 @@
 
 // 点击跳转做的事情
 - (IBAction)jumpClick:(id)sender {
-//    tabBarVc.delegate = (id<UITabBarControllerDelegate>)[UIApplication sharedApplication].delegate;
-
     BQTabBarController *tabBarVc = [[BQTabBarController alloc] init];
     [UIApplication sharedApplication].keyWindow.rootViewController = tabBarVc;
 
@@ -134,6 +132,7 @@
 // 设置启动图片
 - (void)setupLaunchImage {
     // 屏幕的适配
+#warning 屏幕适配..待优化..
     if (iPhone6p) { // 6p、7p
         self.LaunchImageView.image = [UIImage imageNamed:@"LaunchImage-800-Portrait-736h@3x"];
     }else if (iPhone6){    // 6、7、8
