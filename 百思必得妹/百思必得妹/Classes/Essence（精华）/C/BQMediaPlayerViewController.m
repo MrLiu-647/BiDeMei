@@ -33,8 +33,8 @@
 
 - (void)dealloc {
     [self.player cancelPendingPrerolls];
-    [self.player replaceCurrentItemWithPlayerItem:nil];
-    self.player = nil;
+//    [self.player replaceCurrentItemWithPlayerItem:nil];
+//    self.player = nil;
 }
 
 @end
