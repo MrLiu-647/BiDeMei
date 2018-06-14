@@ -178,6 +178,10 @@
 		5A8DFB272026E26B00B25F1C /* BQWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BQWebViewController.m; sourceTree = "<group>"; };
 		5A8DFB282026E26B00B25F1C /* BQWebViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BQWebViewController.xib; sourceTree = "<group>"; };
 		5A8DFB2B2026EF2D00B25F1C /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		5AB3AD4520D21859008A7DFB /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		5AB3AD4620D2186D008A7DFB /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		5AB3AD4720D21896008A7DFB /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		5AB3AD4820D2189E008A7DFB /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		5ACFE085200CEBED005C2F1D /* BQTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BQTabBarController.h; sourceTree = "<group>"; };
 		5ACFE086200CEBED005C2F1D /* BQTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BQTabBarController.m; sourceTree = "<group>"; };
 		5ACFE089200E117D005C2F1D /* UIImage+image.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+image.h"; sourceTree = "<group>"; };
@@ -1053,6 +1057,10 @@
 			isa = PBXVariantGroup;
 			children = (
 				5AE5F436200B8D6300788AA7 /* Base */,
+				5AB3AD4520D21859008A7DFB /* zh-Hans */,
+				5AB3AD4620D2186D008A7DFB /* zh-Hant */,
+				5AB3AD4720D21896008A7DFB /* fr */,
+				5AB3AD4820D2189E008A7DFB /* ko */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -1064,6 +1072,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1121,6 +1130,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
