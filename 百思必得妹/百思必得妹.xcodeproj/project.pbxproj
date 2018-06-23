@@ -19,6 +19,7 @@
 		5A1162A9201C618200A5425C /* BQLoginRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A1162A7201C618200A5425C /* BQLoginRegisterViewController.m */; };
 		5A1162AA201C618200A5425C /* BQLoginRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A1162A8201C618200A5425C /* BQLoginRegisterViewController.xib */; };
 		5A1B7DF4203E8C1A0088ED68 /* BQTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A1B7DF3203E8C1A0088ED68 /* BQTopic.m */; };
+		5A2293EC20DE90C8004B84EA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5A2293EE20DE90C8004B84EA /* InfoPlist.strings */; };
 		5A22F7202025EEEF004ED939 /* BQSquareItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A22F71F2025EEEF004ED939 /* BQSquareItem.m */; };
 		5A26BA27201E1C5100685B4E /* BQLoginRegisterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A26BA26201E1C5100685B4E /* BQLoginRegisterView.m */; };
 		5A26BA29201E1C7200685B4E /* BQLoginRegisterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A26BA28201E1C7200685B4E /* BQLoginRegisterView.xib */; };
@@ -117,6 +118,11 @@
 		5A1162A8201C618200A5425C /* BQLoginRegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BQLoginRegisterViewController.xib; sourceTree = "<group>"; };
 		5A1B7DF2203E8C1A0088ED68 /* BQTopic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BQTopic.h; sourceTree = "<group>"; };
 		5A1B7DF3203E8C1A0088ED68 /* BQTopic.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BQTopic.m; sourceTree = "<group>"; };
+		5A2293ED20DE90C8004B84EA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5A2293EF20DE90DF004B84EA /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		5A2293F020DE90E0004B84EA /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5A2293F120DE90E1004B84EA /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5A2293F220DE90E3004B84EA /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		5A22F71E2025EEEF004ED939 /* BQSquareItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BQSquareItem.h; sourceTree = "<group>"; };
 		5A22F71F2025EEEF004ED939 /* BQSquareItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BQSquareItem.m; sourceTree = "<group>"; };
 		5A26BA25201E1C5100685B4E /* BQLoginRegisterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BQLoginRegisterView.h; sourceTree = "<group>"; };
@@ -565,6 +571,7 @@
 				5AE5F433200B8D6300788AA7 /* Assets.xcassets */,
 				5AE5F435200B8D6300788AA7 /* LaunchScreen.storyboard */,
 				5AE5F438200B8D6300788AA7 /* Info.plist */,
+				5A2293EE20DE90C8004B84EA /* InfoPlist.strings */,
 			);
 			path = "百思必得妹";
 			sourceTree = "<group>";
@@ -879,6 +886,10 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
+				fr,
+				ko,
+				"zh-Hant",
 			);
 			mainGroup = 5AE5F41E200B8D6300788AA7;
 			productRefGroup = 5AE5F428200B8D6300788AA7 /* Products */;
@@ -897,6 +908,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5AE9ADC7204947A70022DFB3 /* BQTopicCell.xib in Resources */,
+				5A2293EC20DE90C8004B84EA /* InfoPlist.strings in Resources */,
 				5A4FA1EB2043EC2B001F0CD8 /* BQTopicVideoView.xib in Resources */,
 				5AE5F437200B8D6300788AA7 /* LaunchScreen.storyboard in Resources */,
 				5A4FA1ED2043EC42001F0CD8 /* BQTopicVoiceView.xib in Resources */,
@@ -1053,6 +1065,18 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		5A2293EE20DE90C8004B84EA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5A2293ED20DE90C8004B84EA /* en */,
+				5A2293EF20DE90DF004B84EA /* zh-Hans */,
+				5A2293F020DE90E0004B84EA /* fr */,
+				5A2293F120DE90E1004B84EA /* ko */,
+				5A2293F220DE90E3004B84EA /* zh-Hant */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		5AE5F435200B8D6300788AA7 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
