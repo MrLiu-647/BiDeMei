@@ -104,13 +104,13 @@
 - (void) setUpAllTitleButton{
     // 0: 精华
     BQNavigationViewController *nav = self.childViewControllers[0];
-    nav.tabBarItem.title = @"精华";
+    nav.tabBarItem.title = NSLocalizedString(@"essence", nil);
     nav.tabBarItem.image = [UIImage imageNamed:@"tabBar_essence_icon"];
     nav.tabBarItem.selectedImage = [UIImage imageOriginalWithName:@"tabBar_essence_click_icon"];
     
     // 1: 新帖
     BQNavigationViewController *nav1 = self.childViewControllers[1];
-    nav1.tabBarItem.title = @"新帖";
+    nav1.tabBarItem.title = NSLocalizedString(@"new", nil);;
     nav1.tabBarItem.image = [UIImage imageNamed:@"tabBar_new_icon"];
     nav1.tabBarItem.selectedImage = [UIImage imageOriginalWithName:@"tabBar_new_click_icon"];
     
@@ -118,13 +118,13 @@
     
     // 3: 关注
     BQNavigationViewController *nav3 = self.childViewControllers[2];
-    nav3.tabBarItem.title = @"关注";
+    nav3.tabBarItem.title = NSLocalizedString(@"friendTrend", nil);;
     nav3.tabBarItem.image = [UIImage imageNamed:@"tabBar_friendTrends_icon"];
     nav3.tabBarItem.selectedImage = [UIImage imageOriginalWithName:@"tabBar_friendTrends_click_icon"];
     
     // 4: 我
     BQNavigationViewController *nav4 = self.childViewControllers[3];
-    nav4.tabBarItem.title = @"我";
+    nav4.tabBarItem.title = NSLocalizedString(@"me", nil);;
     nav4.tabBarItem.image = [UIImage imageNamed:@"tabBar_me_icon"];
     nav4.tabBarItem.selectedImage = [UIImage imageOriginalWithName:@"tabBar_me_click_icon"];
 }
