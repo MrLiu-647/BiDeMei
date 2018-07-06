@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html dir="ltr" class="client-js" lang="zh-cn"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>百思不得姐-推荐关注标签列表API</title>
+<meta charset="UTF-8">
+<meta name="generator" content="MediaWiki 1.18.2">
+    <link rel="shortcut icon" href="css/bs1.jpg">
+<link rel="search" type="application/opensearchdescription+xml" href="http://open.weibo.com/wiki/opensearch_desc.php" title="微博API (zh-cn)">
+<link rel="alternate" type="application/atom+xml" title="微博API的Atom" href="http://open.weibo.com/wiki/index.php?title=%E7%89%B9%E6%AE%8A:%E6%9C%80%E8%BF%91%E6%9B%B4%E6%94%B9&amp;feed=atom">
+<link rel="stylesheet" href="css/load.css">
+<link rel="stylesheet" href="css/wiki_main_lumpsugar.css" media="screen">
+<link rel="stylesheet" href="css/common.css" media="screen">
+<link rel="stylesheet" href="css/usually.css" media="screen">
+<link rel="stylesheet" href="css/api_comment.css" media="screen">
+<link rel="stylesheet" href="css/op_star.css" media="screen">
+<link rel="stylesheet" href="css/layer_tips.css" media="screen">
+<!--[if lt IE 5.5000]><link rel="stylesheet" href="/wiki/skins/monobook/IE50Fixes.css?303" media="screen" /><![endif]-->
+<!--[if IE 5.5000]><link rel="stylesheet" href="/wiki/skins/monobook/IE55Fixes.css?303" media="screen" /><![endif]-->
+<!--[if IE 6]><link rel="stylesheet" href="/wiki/skins/monobook/IE60Fixes.css?303" media="screen" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" href="/wiki/skins/monobook/IE70Fixes.css?303" media="screen" /><![endif]--><style type="text/css" media="all">.mw-collapsible-toggle{float:right} li .mw-collapsible-toggle{float:none} .mw-collapsible-toggle-li{list-style:none}
+
+/* cache key: wiki:resourceloader:filter:minify-css:4:4250852ed2349a0d4d0fc6509a3e7d4c */
+</style><style type="text/css" media="all">.js-messagebox{margin:1em 5%;padding:0.5em 2.5%;border:1px solid #ccc;background-color:#fcfcfc;font-size:0.8em}.js-messagebox .js-messagebox-group{margin:1px;padding:0.5em 2.5%;border-bottom:1px solid #ddd}.js-messagebox .js-messagebox-group:last-child{border-bottom:thin none transparent}
+
+/* cache key: wiki:resourceloader:filter:minify-css:4:8b08bdc91c52a9ffba396dccfb5b473c */
+</style><meta name="ResourceLoaderDynamicStyles" content="">
+<style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: wiki:resourceloader:filter:minify-css:4:c88e2bcd56513749bec09a7e29cb3ffa */
+</style>
+<script src="css/suda.js" async="" charset="utf-8" type="text/javascript"></script><script src="css/load.js"></script><script src="css/load_004.js"></script>
+<script>if(window.mw){
+	mw.config.set({"wgCanonicalNamespace": "", "wgCanonicalSpecialPageName": false, "wgNamespaceNumber": 0, "wgPageName": "2/statuses/friends_timeline", "wgTitle": "2/statuses/friends timeline", "wgCurRevisionId": 14233, "wgArticleId": 825, "wgIsArticle": true, "wgAction": "view", "wgUserName": null, "wgUserGroups": ["*"], "wgCategories": [], "wgBreakFrames": false, "wgRestrictionEdit": [], "wgRestrictionMove": []});
+}
+</script><script>if(window.mw){
+	mw.loader.load(["mediawiki.page.startup"]);
+}
+</script><script type="text/javascript" src="css/load_003.js"></script>
+</head>
+<body class="mediawiki ltr sitedir-ltr B_wiki_main  skin-monobook">
+
+
+<div class="op_header" id="pl_web_top">
+    <div class="global_top_header ">
+	    <div class="header_inner">
+	        <div class="header_wrapper">
+	            <div class="logo_container">
+	                <!--<a class="logo_link" href="http://www.520it.com" title="进入首页"><img class="logo_img" src="images/transparent.png" alt="Weibo Platform Logo"></a>-->
+	                <h1 class="hidden_title">微博开放平台</h1>
+	            </div>
+	            <div class="nav_list_container">
+	                <ul class="nav_list">
+	                    <!--<li class="nav_item nav_item_more nav_more_mouseover2">-->
+	                        <!--<a class="nav_link" action-type="selection_btn" action-data="index=1" href="http://open.weibo.com/development" title="">微连接<i class="mark_more_arrow"></i></a>-->
+	                        <!--<div class="nav_more_layer" action-type="selection_menu" action-data="index=1">-->
+	                            <!--<div class="nav_more_link_container">-->
+	                                <!--<div class="more_link_line"><a class="nav_more_link" href="http://open.weibo.com/development/mobile" title="">移动应用</a></div>-->
+	                                <!--<div class="more_link_line"><a class="nav_more_link" href="http://open.weibo.com/connect" title="">网站接入</a></div>-->
+	                            <!--<div class="more_link_line"><a class="nav_more_link" href="http://open.weibo.com/development/mobilegame" title="">无线游戏</a></div>-->
+	                            <!--</div>-->
+	                        <!--</div>-->
+	                    <!--</li>-->
+	                    <!--<li class="nav_item nav_item_more nav_more_mouseover2">-->
+	                        <!--<a class="nav_link" action-type="selection_btn" action-data="index=2" href="http://open.weibo.com/service" title="">微服务<i class="mark_more_arrow"></i></a>-->
+	                        <!--<div class="nav_more_layer" action-type="selection_menu" action-data="index=2">-->
+	                            <!--<div class="nav_more_link_container">-->
+	                                <!--<div class="more_link_line"><a class="nav_more_link" href="http://open.weibo.com/development/pro" title="">轻应用</a></div>-->
+                             		<!--<div class="more_link_line"><a class="nav_more_link" href="http://open.weibo.com/pay" title="">微博支付</a></div>                            	-->
+                              		<!--<div class="more_link_line"><a class="nav_more_link" href="http://open.weibo.com/development/fenfu" title="">粉丝服务</a></div>-->
+                              		<!--<div class="more_link_line"><a class="nav_more_link" href="http://open.weibo.com/development/businessdata" title="">商业数据</a></div>-->
+                              		<!--<div class="more_link_line"><a class="nav_more_link" href="http://open.weibo.com/wp/intro" title="">WP介绍</a></div>-->
+	                            <!--</div>-->
+	                        <!--</div>-->
+	                    <!--</li>-->
+	                    <li class="nav_item nav_current">
+	                        <a class="nav_link" href="%E7%99%BE%E6%80%9D%E4%B8%8D%E5%BE%97%E5%A7%90-%E6%8E%A8%E8%8D%90%E5%85%B3%E6%B3%A8%E6%A0%87%E7%AD%BEAPI.html" title="">文档</a>
+	                    </li>
+	                    <!--<li class="nav_item">-->
+	                        <!--<a class="nav_link" href="http://open.weibo.com/support" title="">支持</a>-->
+	                    <!--</li>-->
+						<!--<li class="nav_item">-->
+                       		 <!--<a class="nav_link" href="http://open.weibo.com/fensitong" title="">推广</a>-->
+                    	<!--</li>-->
+	                    <!--<li class="nav_item">-->
+	                        <!--<a class="nav_link" node-type="manage_center" href="javascript:void(0);" {="" hidefocus="true" title="">我的应用</a>-->
+	                    <!--</li>-->
+	                    
+	                </ul>
+	            </div>
+	            <!--登录Start-->
+	            <!--<div class="pull_right">-->
+	                                    <!--<div class="login_link_container">-->
+                    	<!--<a class="login_link" node-type="login_btn" href="javascript:;" title="">登录</a>-->
+                    <!--</div>-->
+	                	            <!--</div>-->
+	            <!--登录End-->
+	            <!-- 美国用户logo右边 -->
+	            	        </div>
+	    </div>
+	</div>
+</div>
+
+<!--主内容开始-->
+<div class="wiki_wrap">
+	<div class="wiki_con">
+    	<div class="con_box">
+        	<div class="header noprint">
+            	<a href="http://open.weibo.com/wiki/" title="开发文档" class="wiki_logo">开发文档</a>
+            </div>
+            <div class="wiki_body">
+            	<div class="wiki_inner">
+					                	<div class="main_content clearfix">
+                		<div class="wiki_side noprint">
+                        	<!--左侧导航-->
+							<div id="pl_web_wikiNav" class="wiki_nav">
+                                <!--<form class="nav_search clearfix" action="/wiki/index.php">-->
+                                    <!--<input name="title" value="特殊:搜索" type="hidden">-->
+                                    <!--<span class="input_wrap"><input name="search" title="在微博API中搜索 [ctrl-f]" accesskey="f" class="ser_input" node-txt="搜索" node-type="search"></span>-->
+                                    <!--<input name="fulltext" value="搜索" title="搜索含这些文字的页面" class="search_btn" type="submit">                                </form>-->
+                                <ul class="nav_list">
+									<li class="n_top ">
+	<h3 action-type="folder"><a href="API%20-%20%E7%99%BE%E6%80%9D%E4%B8%8D%E5%BE%97%E5%A7%90API.html"><em class="wiki_icon icon_首页"></em><span class="txt">首页</span>	</a></h3>	</li>
+	<!--<li class="n_top ">-->
+	<!--<h3 action-type="folder"><a href="http://open.weibo.com/wiki/%E5%B9%B3%E5%8F%B0%E5%85%AC%E5%91%8A"><em class="wiki_icon icon_平台公告"></em><span class="txt">平台公告</span>	</a></h3>	</li>-->
+	<!--<li class="n_top ">-->
+	<!--<h3 action-type="folder"><a href="#" onclick="return false;"><em class="wiki_icon icon_AppInfo"></em><span class="txt">平台概述</span><em class="nav_arr"></em>	</a></h3>	<ul class="child_list" style="display:none;"><li id="n-.E6.A6.82.E8.BF.B0" class="n_sub"><a href="http://open.weibo.com/wiki/%E6%A6%82%E8%BF%B0">概述</a></li><li id="n-.E5.B9.B3.E5.8F.B0.E5.85.AC.E7.BA.A6" class="n_sub"><a href="http://open.weibo.com/wiki/%E5%B9%B3%E5%8F%B0%E5%85%AC%E7%BA%A6">平台公约</a></li><li id="n-.E6.96.B0.E6.89.8B.E6.8C.87.E5.8D.97" class="n_sub"><a href="http://open.weibo.com/wiki/%E6%96%B0%E6%89%8B%E6%8C%87%E5%8D%97">新手指南</a></li>	</ul>	</li>-->
+	<!--<li class="n_top ">-->
+	<!--<h3 action-type="folder"><a href="#" onclick="return false;"><em class="wiki_icon icon_wkDoc"></em><span class="txt">政策规范</span><em class="nav_arr"></em>	</a></h3>	<ul class="child_list" style="display:none;"><li id="n-.E5.BC.80.E5.8F.91.E8.80.85.E5.8D.8F.E8.AE.AE" class="n_sub"><a href="http://open.weibo.com/wiki/%E5%BC%80%E5%8F%91%E8%80%85%E5%8D%8F%E8%AE%AE">开发者协议</a></li><li id="n-.E5.BA.94.E7.94.A8.E8.BF.90.E8.90.A5.E7.AE.A1.E7.90.86.E8.A7.84.E8.8C.83" class="n_sub"><a href="http://open.weibo.com/wiki/%E5%BA%94%E7%94%A8%E8%BF%90%E8%90%A5%E7%AE%A1%E7%90%86%E8%A7%84%E8%8C%83">应用运营管理规范</a></li><li id="n-.E5.BE.AE.E8.BF.9E.E6.8E.A5.E5.88.86.E7.BA.A7.E7.AE.A1.E7.90.86.E5.8A.9E.E6.B3.95" class="n_sub"><a href="http://open.weibo.com/wiki/%E5%BE%AE%E8%BF%9E%E6%8E%A5%E5%90%88%E4%BD%9C%E4%BC%99%E4%BC%B4%E5%88%86%E7%BA%A7%E7%AE%A1%E7%90%86%E5%8A%9E%E6%B3%95">微连接分级管理办法</a></li><li id="n-.E5.BA.94.E7.94.A8.E5.AE.A1.E6.A0.B8.E4.BA.A7.E5.93.81.E6.8C.87.E5.8D.97" class="n_sub"><a href="http://open.weibo.com/wiki/%E5%BA%94%E7%94%A8%E5%AE%A1%E6%A0%B8%E4%BA%A7%E5%93%81%E6%8C%87%E5%8D%97">应用审核产品指南</a></li><li id="n-.E5.BA.94.E7.94.A8.E5.AE.89.E5.85.A8.E5.BC.80.E5.8F.91.E6.B3.A8.E6.84.8F.E4.BA.8B.E9.A1.B9" class="n_sub"><a href="http://open.weibo.com/wiki/%E5%BA%94%E7%94%A8%E5%AE%89%E5%85%A8%E5%BC%80%E5%8F%91%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9">应用安全开发注意事项</a></li><li id="n-.E5.B9.B3.E5.8F.B0.E5.BA.94.E7.94.A8.E8.AE.BE.E8.AE.A1.E8.A7.84.E8.8C.83" class="n_sub"><a href="http://open.weibo.com/wiki/%E5%BA%94%E7%94%A8%E8%AE%BE%E8%AE%A1%E8%A7%84%E8%8C%83">平台应用设计规范</a></li>	</ul>	</li>-->
+	<!--<li class="n_top ">-->
+	<!--<h3 action-type="folder"><a href="#" onclick="return false;"><em class="wiki_icon icon_AppInfo"></em><span class="txt">微服务</span><em class="nav_arr"></em>	</a></h3>	<ul class="child_list" style="display:none;"><li id="n-.E5.BE.AE.E6.9C.8D.E5.8A.A1.E6.8E.A5.E5.85.A5.E6.8C.87.E5.8D.97" class="n_sub"><a href="http://open.weibo.com/wiki/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%8E%A5%E5%85%A5%E6%8C%87%E5%8D%97">微服务接入指南</a></li>	</ul>	</li>-->
+	<!--<li class="n_top ">-->
+	<!--<h3 action-type="folder"><a href="#" onclick="return false;"><em class="wiki_icon icon_wkDoc"></em><span class="txt">轻应用</span><em class="nav_arr"></em>	</a></h3>	<ul class="child_list" style="display:none;"><li id="n-.E8.BD.BB.E5.BA.94.E7.94.A8.E6.8E.A5.E5.85.A5.E6.8C.87.E5.8D.97" class="n_sub"><a href="http://open.weibo.com/wiki/%E8%BD%BB%E5%BA%94%E7%94%A8%E6%8E%A5%E5%85%A5%E6%8C%87%E5%8D%97">轻应用接入指南</a></li><li id="n-.E8.BD.BB.E5.BA.94.E7.94.A8.E5.BC.80.E5.8F.91.E6.8C.87.E5.8D.97" class="n_sub"><a href="http://open.weibo.com/wiki/%E8%BD%BB%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97">轻应用开发指南</a></li><li id="n-.E8.BD.BB.E5.BA.94.E7.94.A8H5.E6.96.B0.E7.89.88JS" class="n_sub"><a href="http://open.weibo.com/wiki/%E8%BD%BB%E5%BA%94%E7%94%A8H5%E6%96%B0%E7%89%88JS">轻应用H5新版JS</a></li><li id="n-.E8.BD.BB.E5.BA.94.E7.94.A8.E5.AE.A1.E6.A0.B8.E8.A7.84.E8.8C.83" class="n_sub"><a href="http://open.weibo.com/wiki/%E8%BD%BB%E5%BA%94%E7%94%A8%E5%AE%A1%E6%A0%B8%E8%A7%84%E8%8C%83">轻应用审核规范</a></li><li id="n-.E8.BD.BB.E5.BA.94.E7.94.A8.E6.9B.B4.E6.96.B0.E6.97.A5.E5.BF.97.26.E5.B8.B8.E8.A7.81.E9.97.AE.E9.A2.98" class="n_sub"><a href="http://open.weibo.com/wiki/%E8%BD%BB%E5%BA%94%E7%94%A8%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97%26%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98">轻应用更新日志&amp;常见问题</a></li>	</ul>	</li>-->
+	<!--<li class="n_top ">-->
+	<!--<h3 action-type="folder"><a href="#" onclick="return false;"><em class="wiki_icon icon_wkDoc"></em><span class="txt">商业数据API</span><em class="nav_arr"></em>	</a></h3>	<ul class="child_list" style="display:none;"><li id="n-.E5.95.86.E4.B8.9A.E6.95.B0.E6.8D.AE.E6.8E.A5.E5.85.A5.E6.8C.87.E5.8D.97" class="n_sub"><a href="http://open.weibo.com/wiki/%E5%95%86%E4%B8%9A%E6%95%B0%E6%8D%AEAPI">商业数据接入指南</a></li><li id="n-.E8.AE.A2.E9.98.85.E6.9C.8D.E5.8A.A1.E6.89.8B.E5.86.8C.28.E4.B8.AD.E6.96.87.E7.89.88.29" class="n_sub"><a href="http://open.weibo.com/wiki/%E8%AE%A2%E9%98%85%E6%9C%8D%E5%8A%A1%E6%89%8B%E5%86%8C">订阅服务手册(中文版)</a></li><li id="n-.E8.AE.A2.E9.98.85.E6.9C.8D.E5.8A.A1.E6.89.8B.E5.86.8C.28.E8.8B.B1.E6.96.87.E7.89.88.29" class="n_sub"><a href="http://open.weibo.com/wiki/Subscription_Service_User%27s_Guide">订阅服务手册(英文版)</a></li><li id="n-.E5.95.86.E4.B8.9AREST-API" class="n_sub"><a href="http://open.weibo.com/wiki/Business_API%E6%96%87%E6%A1%A3">商业REST API</a></li><li id="n-.E5.95.86.E4.B8.9A.E6.95.B0.E6.8D.AE.E5.B8.B8.E8.A7.81.E9.97.AE.E9.A2.98" class="n_sub"><a href="http://open.weibo.com/wiki/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98">商业数据常见问题</a></li>	</ul>	</li>-->
+	<!--<li class="n_top ">-->
+	<!--<h3 action-type="folder"><a href="#" onclick="return false;"><em class="wiki_icon icon_wkDoc"></em><span class="txt">微博支付</span><em class="nav_arr"></em>	</a></h3>	<ul class="child_list" style="display:none;"><li id="n-.E5.BE.AE.E5.8D.9A.E6.94.AF.E4.BB.98.E6.8E.A5.E5.85.A5.E6.8C.87.E5.8D.97" class="n_sub"><a href="http://open.weibo.com/wiki/%E5%BE%AE%E5%8D%9A%E6%94%AF%E4%BB%98%E6%8E%A5%E5%85%A5%E6%8C%87%E5%8D%97">微博支付接入指南</a></li><li id="n-.E5.BE.AE.E5.8D.9A.E6.94.AF.E4.BB.98.E5.BA.94.E7.94.A8.E6.8E.A5.E5.85.A5.E6.8C.87.E5.8D.97" class="n_sub"><a href="http://open.weibo.com/wiki/%E5%BE%AE%E5%8D%9A%E6%94%AF%E4%BB%98%E5%BA%94%E7%94%A8%E6%8E%A5%E5%85%A5%E6%8C%87%E5%8D%97">微博支付应用接入指南</a></li><li id="n-.E5.BE.AE.E5.8D.9A.E6.94.AF.E4.BB.98.E5.AE.A1.E6.A0.B8.E6.B5.81.E7.A8.8B" class="n_sub"><a href="http://open.weibo.com/wiki/%E5%BE%AE%E5%8D%9A%E6%94%AF%E4%BB%98%E5%AE%A1%E6%A0%B8%E6%B5%81%E7%A8%8B">微博支付审核流程</a></li>	</ul>	</li>-->
+	<!--<li class="n_top ">-->
+	<!--<h3 action-type="folder"><a href="#" onclick="return false;"><em class="wiki_icon icon_wkDoc"></em><span class="txt">粉丝服务平台</span><em class="nav_arr"></em>	</a></h3>	<ul class="child_list" style="display:none;"><li id="n-.E7.B2.89.E4.B8.9D.E6.9C.8D.E5.8A.A1.E5.B9.B3.E5.8F.B0" class="n_sub"><a href="http://open.weibo.com/wiki/%E7%B2%89%E4%B8%9D%E6%9C%8D%E5%8A%A1%E5%B9%B3%E5%8F%B0">粉丝服务平台</a></li><li id="n-.E6.96.B0.E6.89.8B.E6.8E.A5.E5.85.A5.E6.8C.87.E5.8D.97" class="n_sub"><a href="http://open.weibo.com/wiki/%E6%96%B0%E6%89%8B%E6%8E%A5%E5%85%A5%E6%8C%87%E5%8D%97">新手接入指南</a></li><li id="n-.E5.BE.AE.E4.BF.A1.E5.BC.80.E5.8F.91.E8.80.85.E8.BF.81.E7.A7.BB.E6.8C.87.E5.8D.97" class="n_sub"><a href="http://open.weibo.com/wiki/%E5%BE%AE%E4%BF%A1%E5%BC%80%E5%8F%91%E8%80%85%E8%BF%81%E7%A7%BB%E6%8C%87%E5%8D%97">微信开发者迁移指南</a></li><li id="n-.E6.8E.A5.E6.94.B6.E6.B6.88.E6.81.AF" class="n_sub"><a href="http://open.weibo.com/wiki/%E6%8E%A5%E6%94%B6%E6%B6%88%E6%81%AF">接收消息</a></li><li id="n-.E5.8F.91.E9.80.81.E6.B6.88.E6.81.AF" class="n_sub"><a href="http://open.weibo.com/wiki/%E5%8F%91%E9%80%81%E6%B6%88%E6%81%AF">发送消息</a></li><li id="n-.E8.87.AA.E5.AE.9A.E4.B9.89.E8.8F.9C.E5.8D.95" class="n_sub"><a href="http://open.weibo.com/wiki/%E8%87%AA%E5%AE%9A%E4%B9%89%E8%8F%9C%E5%8D%95">自定义菜单</a></li><li id="n-.E7.94.A8.E6.88.B7.E7.AE.A1.E7.90.86" class="n_sub"><a href="http://open.weibo.com/wiki/%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86">用户管理</a></li><li id="n-.E7.94.9F.E6.88.90.E5.B8.A6.E5.8F.82.E6.95.B0.E7.9A.84.E4.BA.8C.E7.BB.B4.E7.A0.81" class="n_sub"><a href="http://open.weibo.com/wiki/%E7%94%9F%E6%88%90%E5%B8%A6%E5%8F%82%E6%95%B0%E7%9A%84%E4%BA%8C%E7%BB%B4%E7%A0%81">生成带参数的二维码</a></li><li id="n-Fans-Service-Platform" class="n_sub"><a href="http://open.weibo.com/wiki/Fans_Service_Platform">Fans Service Platform</a></li>	</ul>	</li>-->
+	<!--<li class="n_top ">-->
+	<!--<h3 action-type="folder"><a href="#" onclick="return false;"><em class="wiki_icon icon_wkDoc"></em><span class="txt">微博登录</span><em class="nav_arr"></em>	</a></h3>	<ul class="child_list" style="display:none;"><li id="n-.E6.8E.88.E6.9D.83.E6.9C.BA.E5.88.B6" class="n_sub"><a href="http://open.weibo.com/wiki/%E6%8E%88%E6%9D%83%E6%9C%BA%E5%88%B6">授权机制</a></li>	</ul>	</li>-->
+	<!--<li class="n_top ">-->
+	<!--<h3 action-type="folder"><a href="#" onclick="return false;"><em class="wiki_icon icon_wkDoc"></em><span class="txt">移动应用</span><em class="nav_arr"></em>	</a></h3>	<ul class="child_list" style="display:none;"><li id="n-.E7.A7.BB.E5.8A.A8.E5.BA.94.E7.94.A8.E4.BB.8B.E7.BB.8D" class="n_sub"><a href="http://open.weibo.com/wiki/%E7%A7%BB%E5%8A%A8%E5%BA%94%E7%94%A8%E4%BB%8B%E7%BB%8D">移动应用介绍</a></li><li id="n-.E7.A7.BB.E5.8A.A8.E5.BA.94.E7.94.A8SSO.E6.8E.88.E6.9D.83" class="n_sub"><a href="http://open.weibo.com/wiki/%E7%A7%BB%E5%8A%A8%E5%BA%94%E7%94%A8SSO%E6%8E%88%E6%9D%83">移动应用SSO授权</a></li>	</ul>	</li>-->
+	<!--<li class="n_top ">-->
+	<!--<h3 action-type="folder"><a href="#" onclick="return false;"><em class="wiki_icon icon_wkDoc"></em><span class="txt">网站接入</span><em class="nav_arr"></em>	</a></h3>	<ul class="child_list" style="display:none;"><li id="n-.E7.BD.91.E7.AB.99.E6.8E.A5.E5.85.A5.E4.BB.8B.E7.BB.8D" class="n_sub"><a href="http://open.weibo.com/wiki/%E7%BD%91%E7%AB%99%E6%8E%A5%E5%85%A5%E4%BB%8B%E7%BB%8D">网站接入介绍</a></li><li id="n-Weibo-Meta-Tags" class="n_sub"><a href="http://open.weibo.com/wiki/Weibo_meta_tag">Weibo Meta Tags</a></li><li id="n-.E5.B8.B8.E8.A7.81.E9.97.AE.E9.A2.98" class="n_sub"><a href="http://open.weibo.com/wiki/%E7%BD%91%E7%AB%99%E6%8E%A5%E5%85%A5%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98">常见问题</a></li>	</ul>	</li>-->
+	<!--<li class="n_top ">-->
+	<!--<h3 action-type="folder"><a href="#" onclick="return false;"><em class="wiki_icon icon_wkDoc"></em><span class="txt">微博API</span><em class="nav_arr"></em>	</a></h3>	<ul class="child_list" style="display:none;"><li id="n-.E5.BE.AE.E5.8D.9AAPI" class="n_sub"><a href="http://open.weibo.com/wiki/%E5%BE%AE%E5%8D%9AAPI">微博API</a></li><li id="n-API.E6.9B.B4.E6.96.B0.E6.97.A5.E5.BF.97" class="n_sub"><a href="http://open.weibo.com/wiki/API%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97">API更新日志</a></li><li id="n-.E6.8E.A5.E5.8F.A3.E8.AE.BF.E9.97.AE.E9.A2.91.E6.AC.A1.E6.9D.83.E9.99.90" class="n_sub"><a href="http://open.weibo.com/wiki/%E6%8E%A5%E5%8F%A3%E8%AE%BF%E9%97%AE%E9%A2%91%E6%AC%A1%E6%9D%83%E9%99%90">接口访问频次权限</a></li><li id="n-.E6.96.B0.E7.89.88.E6.8E.A5.E5.8F.A3.E8.BF.81.E7.A7.BB.E6.8C.87.E5.8D.97" class="n_sub"><a href="http://open.weibo.com/wiki/V1_To_V2">新版接口迁移指南</a></li>	</ul>	</li>-->
+	<!--<li class="n_top ">-->
+	<!--<h3 action-type="folder"><a href="#" onclick="return false;"><em class="wiki_icon icon_wkDown"></em><span class="txt">资源下载</span><em class="nav_arr"></em>	</a></h3>	<ul class="child_list" style="display:none;"><li id="n-.E5.BE.AE.E5.8D.9A.E6.A0.87.E8.AF.86.E4.B8.8B.E8.BD.BD" class="n_sub"><a href="http://open.weibo.com/wiki/%E5%BE%AE%E5%8D%9A%E6%A0%87%E8%AF%86%E4%B8%8B%E8%BD%BD">微博标识下载</a></li><li id="n-SDK" class="n_sub"><a href="http://open.weibo.com/wiki/SDK">SDK</a></li>	</ul>	</li>-->
+	<!--<li class="n_top ">-->
+	<!--<h3 action-type="folder"><a href="http://open.weibo.com/wiki/%E8%81%94%E7%B3%BB%E6%88%91%E4%BB%AC"><em class="wiki_icon icon_Contact"></em><span class="txt">联系我们</span>	</a></h3>	</li>-->
+	<!--<li class="n_top ">-->
+	<!--<h3 action-type="folder"><a href="http://open.weibo.com/wiki/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98"><em class="wiki_icon icon_wkDoc"></em><span class="txt">常见问题</span>	</a></h3>	</li>-->
+	<li class="n_top" id="p-tb">
+		<h3><em class="wiki_icon icon_wkQus"></em><span class="txt">工具箱</span><em class="nav_arr"></em></h3>
+		<ul class="child_list" style="background:none"><li id="t-whatlinkshere" class="n_sub"><a href="http://open.weibo.com/wiki/%E7%89%B9%E6%AE%8A:%E9%93%BE%E5%85%A5%E9%A1%B5%E9%9D%A2/2/statuses/friends_timeline" title="所有链入本页的wiki页面列表 [j]" accesskey="j">链入页面</a></li><li id="t-recentchangeslinked" class="n_sub"><a href="http://open.weibo.com/wiki/%E7%89%B9%E6%AE%8A:%E9%93%BE%E5%87%BA%E6%9B%B4%E6%94%B9/2/statuses/friends_timeline" title="本页链入的页面的最近更改 [k]" accesskey="k">链出更改</a></li><li id="t-specialpages" class="n_sub"><a href="http://open.weibo.com/wiki/%E7%89%B9%E6%AE%8A:%E7%89%B9%E6%AE%8A%E9%A1%B5%E9%9D%A2" title="所有特殊页面列表 [q]" accesskey="q">特殊页面</a></li><li class="n_sub"><a href="http://open.weibo.com/wiki/index.php?title=2/statuses/friends_timeline&amp;printable=yes" rel="alternate">可打印版</a></li><li id="t-permalink" class="n_sub"><a href="http://open.weibo.com/wiki/index.php?title=2/statuses/friends_timeline&amp;oldid=14233" title="本页面该修订版本的永久链接">永久链接</a></li>		</ul>
+	</li>
+								</ul>
+								<ul class="quick_nav">
+									                                </ul>
+							</div>
+                            <!--/左侧导航结束-->
+                        </div>
+                    	<div class="wiki_bodyContent" id="bodyContent">
+																				<div id="mw-js-message" class="js-messagebox" style="display:none"></div>
+																					<div id="jump-to-nav">跳转到： <a href="#column-one">导航</a>, <a href="#searchInput">搜索</a></div>
+							<div dir="ltr" class="mw-content-ltr" lang="zh-cn"><h1 class="wiki_title"> <span class="mw-headline" id="statuses.2Ffriends_timeline">api/api_open</span></h1>
+<p>获取“推荐关注”中左侧标签的列表
+</p>
+<h2 class="wiki_title"> <span class="mw-headline" id="URL">URL</span></h2>
+<p><span style="text-transform:lowercase;font-weight:600"><a rel="nofollow" class="external free" href="http://api.budejie.com/api/api_open.php">http://api.budejie.com/api/api_open.php</a></span>
+</p>
+<h2 class="wiki_title"> <span class="mw-headline" id=".E6.94.AF.E6.8C.81.E6.A0.BC.E5.BC.8F">支持格式</span></h2>
+<p><span style="text-transform:uppercase;font-weight:600">JSON</span>
+</p>
+<h2 class="wiki_title"> <span class="mw-headline" id="HTTP.E8.AF.B7.E6.B1.82.E6.96.B9.E5.BC.8F">HTTP请求方式</span></h2>
+<p><span style="text-transform:uppercase;font-weight:600">GET</span>
+</p>
+<h2 class="wiki_title"> <span class="mw-headline" id=".E6.98.AF.E5.90.A6.E9.9C.80.E8.A6.81.E7.99.BB.E5.BD.95">是否需要登录</span></h2>
+<p><span style="text-transform:lowercase;font-weight:600">否</span>
+    <!--<br>-->
+<!--关于登录授权，参见 <a href="http://open.weibo.com/wiki/%E6%8E%88%E6%9D%83%E6%9C%BA%E5%88%B6%E8%AF%B4%E6%98%8E" title="授权机制说明">如何登录授权</a>-->
+</p>
+<h2 class="wiki_title"> <span class="mw-headline" id=".E8.AE.BF.E9.97.AE.E6.8E.88.E6.9D.83.E9.99.90.E5.88.B6">访问授权限制</span></h2>
+<p>访问级别：<span style="text-transform:lowercase;font-weight:600">普通接口</span><br>
+频次限制：<span style="text-transform:lowercase;font-weight:600">否</span>
+    <!--<br>-->
+<!--关于频次限制，参见 <a href="http://open.weibo.com/wiki/Rate-limiting" title="Rate-limiting">接口访问权限说明</a>-->
+</p>
+<h2 class="wiki_title"> <span class="mw-headline" id=".E8.AF.B7.E6.B1.82.E5.8F.82.E6.95.B0">请求参数</span></h2>
+<table class="parameters" style="border-color: #CCCCCC;" border="1" cellpadding="0" cellspacing="0" width="100%">
+
+<tbody><tr>
+<th style="text-align:center;font-weight:bolder;border:1px solid #cccccc" width="10%">&nbsp;
+</th>
+<th style="text-align:center;font-weight:bolder;border:1px solid #cccccc" width="5%">必选
+</th>
+<th style="text-align:center;font-weight:bolder;border:1px solid #cccccc" width="10%">类型及范围
+</th>
+<th style="text-align:center;font-weight:bolder;border:1px solid #cccccc" width="75%">说明
+</th></tr>
+<tr>
+<td style="text-align:center;font-weight:bolder;border:1px solid #cccccc">a
+</td>
+<td style="text-align:center;text-transform:lowercase;border:1px solid #cccccc">true
+</td>
+<td style="text-align:left;padding-left:5px;border:1px solid #cccccc">string
+</td>
+<td style="text-align:left;padding-left:5px;border:1px solid #cccccc">category
+</td></tr>
+<tr>
+    <td style="text-align:center;font-weight:bolder;border:1px solid #cccccc">appname
+    </td>
+    <td style="text-align:center;text-transform:lowercase;border:1px solid #cccccc">false
+    </td>
+    <td style="text-align:left;padding-left:5px;border:1px solid #cccccc">string
+    </td>
+    <td style="text-align:left;padding-left:5px;border:1px solid #cccccc">参数为baisishequ 分享到朋友圈时候使用
+    </td></tr>
+<tr>
+    <td style="text-align:center;font-weight:bolder;border:1px solid #cccccc">asid
+    </td>
+    <td style="text-align:center;text-transform:lowercase;border:1px solid #cccccc">false
+    </td>
+    <td style="text-align:left;padding-left:5px;border:1px solid #cccccc">string
+    </td>
+    <td style="text-align:left;padding-left:5px;border:1px solid #cccccc">AC824640-5493-4DAD-B356-F84136BE8A55
+    </td></tr>
+<tr>
+<td style="text-align:center;font-weight:bolder;border:1px solid #cccccc">c
+</td>
+<td style="text-align:center;text-transform:lowercase;border:1px solid #cccccc">true
+</td>
+<td style="text-align:left;padding-left:5px;border:1px solid #cccccc">string
+</td>
+<td style="text-align:left;padding-left:5px;border:1px solid #cccccc">subscribe
+</td></tr>
+<tr>
+    <td style="text-align:center;font-weight:bolder;border:1px solid #cccccc">client
+    </td>
+    <td style="text-align:center;text-transform:lowercase;border:1px solid #cccccc">false
+    </td>
+    <td style="text-align:left;padding-left:5px;border:1px solid #cccccc">string
+    </td>
+    <td style="text-align:left;padding-left:5px;border:1px solid #cccccc">iphone
+    </td></tr>
+<td style="text-align:center;font-weight:bolder;border:1px solid #cccccc">device
+</td>
+<td style="text-align:center;text-transform:lowercase;border:1px solid #cccccc">false
+</td>
+<td style="text-align:left;padding-left:5px;border:1px solid #cccccc">string
+</td>
+<td style="text-align:left;padding-left:5px;border:1px solid #cccccc">ios设备
+</td></tr>
+<td style="text-align:center;font-weight:bolder;border:1px solid #cccccc">jbk
+</td>
+<td style="text-align:center;text-transform:lowercase;border:1px solid #cccccc">false
+</td>
+<td style="text-align:left;padding-left:5px;border:1px solid #cccccc">int
+</td>
+<td style="text-align:left;padding-left:5px;border:1px solid #cccccc">一般为“0”
+</td></tr>
+<td style="text-align:center;font-weight:bolder;border:1px solid #cccccc">openudid
+</td>
+<td style="text-align:center;text-transform:lowercase;border:1px solid #cccccc">false
+</td>
+<td style="text-align:left;padding-left:5px;border:1px solid #cccccc">string
+</td>
+<td style="text-align:left;padding-left:5px;border:1px solid #cccccc">19deb9dde5ccf65fe1623b59a5ebeff55bcbc319
+</td></tr>
+<td style="text-align:center;font-weight:bolder;border:1px solid #cccccc">uid
+</td>
+<td style="text-align:center;text-transform:lowercase;border:1px solid #cccccc">false
+</td>
+<td style="text-align:left;padding-left:5px;border:1px solid #cccccc">string
+</td>
+<td style="text-align:left;padding-left:5px;border:1px solid #cccccc">当前所登陆的用户id,如果未登录则为空
+</td></tr>
+<td style="text-align:center;font-weight:bolder;border:1px solid #cccccc">ver
+</td>
+<td style="text-align:center;text-transform:lowercase;border:1px solid #cccccc">false
+</td>
+<td style="text-align:left;padding-left:5px;border:1px solid #cccccc">string
+</td>
+<td style="text-align:left;padding-left:5px;border:1px solid #cccccc">当前所安装的app的版本
+</td>
+</tr>
+</tbody></table>
+<h2 class="wiki_title"> <span class="mw-headline" id=".E6.B3.A8.E6.84.8F.E4.BA.8B.E9.A1.B9">注意事项</span></h2>
+<p>无
+</p>
+<!--<h2 class="wiki_title"> <span class="mw-headline" id=".E8.B0.83.E7.94.A8.E6.A0.B7.E4.BE.8B.E5.8F.8A.E8.B0.83.E8.AF.95.E5.B7.A5.E5.85.B7">调用样例及调试工具</span></h2>-->
+<!--<p><a rel="nofollow" class="external text" href="http://open.weibo.com/tools/console?uri=statuses/friends_timeline&amp;httpmethod=GET&amp;">API测试工具</a>-->
+<!--</p>-->
+<h2 class="wiki_title"> <span class="mw-headline" id=".E8.BF.94.E5.9B.9E.E7.BB.93.E6.9E.9C">返回结果 </span></h2>
+<div class="code_type" style="text-transform:uppercase;margin-bottom:5px;">JSON示例</div><br>
+<pre class="brush:js">
+{
+    &quot;total&quot;: 13,
+    &quot;list&quot;: [{
+        &quot;id&quot;: &quot;9&quot;,
+        &quot;name&quot;: &quot;电台&quot;,
+        &quot;count&quot;: &quot;78&quot;
+    }, {
+        &quot;id&quot;: &quot;16&quot;,
+        &quot;name&quot;: &quot;爱拍&quot;,
+        &quot;count&quot;: &quot;179&quot;
+    }]
+}
+</pre>
+
+<!--<p>关于错误返回值与错误代码，参见 <a href="http://open.weibo.com/wiki/Error_code" title="Error code">错误代码说明</a>-->
+<!--</p>-->
+<h2 class="wiki_title"> <span class="mw-headline" id=".E8.BF.94.E5.9B.9E.E5.AD.97.E6.AE.B5.E8.AF.B4.E6.98.8E">返回字段说明</span></h2>
+<table class="parameters" style="border-color: #CCCCCC;" border="1" cellpadding="0" cellspacing="0" width="100%">
+
+<tbody><tr>
+<th style="text-align:left;padding-left:5px;font-weight:bolder;border:1px solid #cccccc" width="25%">返回值字段
+</th>
+<th style="text-align:left;padding-left:5px;font-weight:bolder;border:1px solid #cccccc" width="15%">字段类型
+</th>
+<th style="text-align:left;padding-left:5px;font-weight:bolder;border:1px solid #cccccc" width="60%">字段说明
+</th></tr>
+<tr>
+<td style="text-align:left;padding-left:5px;font-weight:bolder;border:1px solid #cccccc">total
+</td>
+<td style="text-align:left;padding-left:5px;text-transform:lowercase;border:1px solid #cccccc">int
+</td>
+<td style="text-align:left;padding-left:5px;border:1px solid #cccccc">左侧标签总数
+</td></tr>
+<tr>
+<td style="text-align:left;padding-left:5px;font-weight:bolder;border:1px solid #cccccc">list
+</td>
+<td style="text-align:left;padding-left:5px;text-transform:lowercase;border:1px solid #cccccc">array
+</td>
+<td style="text-align:left;padding-left:5px;border:1px solid #cccccc">标签数组
+</td></tr>
+<tr>
+<td style="text-align:left;padding-left:5px;font-weight:bolder;border:1px solid #cccccc">name
+</td>
+<td style="text-align:left;padding-left:5px;text-transform:lowercase;border:1px solid #cccccc">string
+</td>
+<td style="text-align:left;padding-left:5px;border:1px solid #cccccc">标签名称
+</td></tr>
+<tr>
+<td style="text-align:left;padding-left:5px;font-weight:bolder;border:1px solid #cccccc">count
+</td>
+<td style="text-align:left;padding-left:5px;text-transform:lowercase;border:1px solid #cccccc">string
+</td>
+<td style="text-align:left;padding-left:5px;border:1px solid #cccccc">此标签下的用户数
+</td></tr>
+<tr>
+<td style="text-align:left;padding-left:5px;font-weight:bolder;border:1px solid #cccccc">id
+</td>
+<td style="text-align:left;padding-left:5px;text-transform:lowercase;border:1px solid #cccccc">string
+</td>
+<td style="text-align:left;padding-left:5px;border:1px solid #cccccc">标签id
+</td></tr>
+</tbody></table>
+<h2 class="wiki_title"> <span class="mw-headline" id=".E5.85.B6.E4.BB.96">其他</span></h2>
+<p>无
+</p>
+<!--<h2 class="wiki_title"> <span class="mw-headline" id=".E7.9B.B8.E5.85.B3.E9.97.AE.E9.A2.98">相关问题</span></h2>-->
+<!--<p></p><div id="relat_qa" data="friends_timeline"><p>无</p></div>-->
+<!--<p></p><p><br>-->
+<!--到<a rel="nofollow" class="external text" href="http://open.weibo.com/qa">问答系统</a> 查看更多问题或提问-->
+<!--</p><p><br>-->
+<!--</p>-->
+<!--<span style="display:none;"><div class="wiki_plus_area"><span class="tit">Language:</span> [[{{{2/uri}}}|中文]]</div></span>-->
+<!--<p><br>-->
+<!--@SHOWGRADE-->
+<!--</p><p><br>-->
+<!--@NOBTNS--><!--@NOHEADING-->
+<!--</p><p><br>-->
+<!--@SHOWGRADE-->
+<!--</p>-->
+<!--
+NewPP limit report
+Preprocessor node count: 613/1000000
+Post-expand include size: 34895/2097152 bytes
+Template argument size: 14204/2097152 bytes
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key wiki:pcache:idhash:825-0!*!0!!*!*!* and timestamp 20150614121528 -->
+</div><div class="printfooter">
+来自“<a href="http://open.weibo.com/wiki/index.php?title=2/statuses/friends_timeline&amp;oldid=14233">http://open.weibo.com/wiki/index.php?title=2/statuses/friends_timeline&amp;oldid=14233</a>”</div>
+							<div id="catlinks" class="catlinks catlinks-allhidden"></div>														<div class="wiki_plus_area_bottom"> 文档更新时间: 2015-06-15</div>						</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--/主内容开始-->
+
+<!--统一底导结构-->
+<!--<div class="op_footer">-->
+<!--<div class="inner">-->
+    <!--<p class="links">-->
+		<!--<a href="http://open.weibo.com/wiki/index.php/%E5%85%B3%E4%BA%8E%E5%BC%80%E6%94%BE%E5%B9%B3%E5%8F%B0">关于微博开放平台</a><span class="W_vline">|</span>-->
+		<!--<a href="http://open.weibo.com/wiki/%E8%81%94%E7%B3%BB%E6%88%91%E4%BB%AC">联系我们</a><span class="W_vline">|</span>-->
+		<!--<a href="http://open.weibo.com/wiki/%E5%BC%80%E5%8F%91%E8%80%85%E5%8D%8F%E8%AE%AE">服务条款</a><span class="W_vline">|</span>-->
+		<!--<a href="http://weibo.com/weibovc">开发者基金</a><span class="W_vline">|</span>-->
+		<!--<a href="http://open.weibo.com/game">微游戏</a><span class="W_vline">|</span>-->
+		<!--<a href="http://open.weibo.com/blog/">平台博客</a>-->
+	<!--</p>-->
+    <!--<p class="copyright W_textb">-->
+		<!--<span>京网文 [2011] 0398-130号</span>-->
+		<!--<span>京ICP证100780号</span>-->
+		<!--<span>Copyright © 1996-2015 SINA</span>-->
+	<!--</p>-->
+<!--</div>-->
+<!--</div>-->
+<!--/统一底导结构-->
+
+<div id="pl_web_wikiApiScore" class="api_comment clearfix" style=""><a action-type="folder" href="#" onclick="return false;" class="api_tip"><span>api评价</span></a><div class="comment_show"><div class="comment_show_wrap"><div node-type="star_line" class="comment_list"><dl class="comlist_li clearfix"><dt class="com_title"><a type="func_tips" class="icon_notice_askgr"></a><span class="com_title_dt">功能：</span></dt><dd class="com_star"><span class="op_star"><em node-type="func_star" style="width:0%;"></em><b action-type="star" action-data="type=func&amp;score=1"></b><b action-type="star" action-data="type=func&amp;score=2"></b><b action-type="star" action-data="type=func&amp;score=3"></b><b action-type="star" action-data="type=func&amp;score=4"></b><b action-type="star" action-data="type=func&amp;score=5"></b></span></dd><dd class="com_intro" node-type="func_desc"><span class="intro_detail W_spetxt_y">评分尚未完成</span></dd></dl><dl class="comlist_li clearfix"><dt class="com_title"><a type="perf_tips" class="icon_notice_askgr"></a><span class="com_title_dt">性能：</span></dt><dd class="com_star"><span class="op_star"><em node-type="perf_star" style="width:0%;"></em><b action-type="star" action-data="type=perf&amp;score=1"></b><b action-type="star" action-data="type=perf&amp;score=2"></b><b action-type="star" action-data="type=perf&amp;score=3"></b><b action-type="star" action-data="type=perf&amp;score=4"></b><b action-type="star" action-data="type=perf&amp;score=5"></b></span></dd><dd class="com_intro" node-type="perf_desc"><span class="intro_detail W_spetxt_y">评分尚未完成</span></dd></dl><dl class="comlist_li clearfix"><dt class="com_title"><a type="easy_tips" class="icon_notice_askgr" "=""></a><span class="com_title_dt">易用：</span></dt><dd class="com_star"><span class="op_star"><em node-type="easy_star" style="width:0%;"></em><b action-type="star" action-data="type=easy&amp;score=1"></b><b action-type="star" action-data="type=easy&amp;score=2"></b><b action-type="star" action-data="type=easy&amp;score=3"></b><b action-type="star" action-data="type=easy&amp;score=4"></b><b action-type="star" action-data="type=easy&amp;score=5"></b></span></dd><dd class="com_intro" node-type="easy_desc"><span class="intro_detail W_spetxt_y">评分尚未完成</span></dd></dl></div><div node-type="suggest" class="comment_area clearfix" style="display: none;"><p class="area_tip">有低于3分的评价，请告诉我们您遇到的问题：</p><div class="area_content "><textarea node-type="content" class="W_inputStp"></textarea></div></div><p class="comment_btn"><span node-type="count" style="display: none;" class="txt_num"><em class="">100</em></span><a href="#" node-type="submit" action-type="submit" onclick="return false;" class="W_btn_a"><span>提交</span></a></p></div></div></div>
+
+<script type="text/javascript" src="css/gaea_1_19.js"></script>
+<script type="text/javascript" src="css/wikiApi.js"></script>
+<script>if(window.mw){
+	mw.loader.load(["mediawiki.user", "mediawiki.util", "mediawiki.page.ready", "mediawiki.legacy.wikibits", "mediawiki.legacy.ajax"]);
+}
+</script><script type="text/javascript" src="css/load_002.js"></script>
+<script>if(window.mw){
+	mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"monobook","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,
+	"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"variant":"zh-cn","language":"zh-cn","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false});;mw.user.tokens.set({"editToken":"+\\","watchToken":false});;mw.loader.state({"user.options":"ready","user.tokens":"ready"});
+	
+	/* cache key: wiki:resourceloader:filter:minify-js:4:42c4e9caefe8ca663d220ee0c286ac74 */
+}
+</script><!-- Served in 0.512 secs. --><noscript>
+<img width="0" height="0" src="http://beacon.sina.com.cn/a.gif?noScript" border="0" alt="" />
+</noscript>
+<script type="text/javascript" charset="utf-8">
+(function() {
+    var doc = document,
+    wa = doc.createElement('script'),
+    s = doc.getElementsByTagName('script')[0];
+    wa.type = 'text/javascript';
+    wa.charset = 'utf-8';
+    wa.async = true;
+    wa.src = 'http://js.t.sinajs.cn/open/analytics/js/suda.js?version=1.1.2.396';
+    s.parentNode.insertBefore(wa, s);
+})();
+</script><div id="xunlei_com_thunder_helper_plugin_d462f475-c18e-46be-bd10-327458d045bd"></div></body></html>

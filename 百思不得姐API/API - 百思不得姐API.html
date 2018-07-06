@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html dir="ltr" class="client-js" lang="zh-cn"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>API - 百思不得姐API</title>
+<meta charset="UTF-8">
+<meta name="generator" content="MediaWiki 1.18.2">
+    <link rel="shortcut icon" href="css/bs1.jpg">
+<link rel="search" type="application/opensearchdescription+xml" href="http://open.weibo.com/wiki/opensearch_desc.php" title="微博API (zh-cn)">
+<link rel="alternate" type="application/atom+xml" title="微博API的Atom" href="http://open.weibo.com/wiki/index.php?title=%E7%89%B9%E6%AE%8A:%E6%9C%80%E8%BF%91%E6%9B%B4%E6%94%B9&amp;feed=atom">
+<link rel="stylesheet" href="css/load.css">
+<link rel="stylesheet" href="css/wiki_main_lumpsugar.css" media="screen">
+<!--[if lt IE 5.5000]><link rel="stylesheet" href="/wiki/skins/monobook/IE50Fixes.css?303" media="screen" /><![endif]-->
+<!--[if IE 5.5000]><link rel="stylesheet" href="/wiki/skins/monobook/IE55Fixes.css?303" media="screen" /><![endif]-->
+<!--[if IE 6]><link rel="stylesheet" href="/wiki/skins/monobook/IE60Fixes.css?303" media="screen" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" href="/wiki/skins/monobook/IE70Fixes.css?303" media="screen" /><![endif]--><style type="text/css" media="all">.mw-collapsible-toggle{float:right} li .mw-collapsible-toggle{float:none} .mw-collapsible-toggle-li{list-style:none}
+
+/* cache key: wiki:resourceloader:filter:minify-css:4:4250852ed2349a0d4d0fc6509a3e7d4c */
+</style><style type="text/css" media="all">.js-messagebox{margin:1em 5%;padding:0.5em 2.5%;border:1px solid #ccc;background-color:#fcfcfc;font-size:0.8em}.js-messagebox .js-messagebox-group{margin:1px;padding:0.5em 2.5%;border-bottom:1px solid #ddd}.js-messagebox .js-messagebox-group:last-child{border-bottom:thin none transparent}
+
+/* cache key: wiki:resourceloader:filter:minify-css:4:8b08bdc91c52a9ffba396dccfb5b473c */
+</style><meta name="ResourceLoaderDynamicStyles" content="">
+<style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: wiki:resourceloader:filter:minify-css:4:c88e2bcd56513749bec09a7e29cb3ffa */
+</style>
+<script src="API%20-%20%E7%99%BE%E6%80%9D%E4%B8%8D%E5%BE%97%E5%A7%90API_files/suda.js" async="" charset="utf-8" type="text/javascript"></script><script src="API%20-%20%E7%99%BE%E6%80%9D%E4%B8%8D%E5%BE%97%E5%A7%90API_files/load_003.js"></script><script src="API%20-%20%E7%99%BE%E6%80%9D%E4%B8%8D%E5%BE%97%E5%A7%90API_files/load_004.js"></script>
+<script>if(window.mw){
+	mw.config.set({"wgCanonicalNamespace": "", "wgCanonicalSpecialPageName": false, "wgNamespaceNumber": 0, "wgPageName": "API", "wgTitle": "API", "wgCurRevisionId": 14322, "wgArticleId": 1843, "wgIsArticle": true, "wgAction": "view", "wgUserName": null, "wgUserGroups": ["*"], "wgCategories": [], "wgBreakFrames": false, "wgRestrictionEdit": [], "wgRestrictionMove": []});
+}
+</script><script>if(window.mw){
+	mw.loader.load(["mediawiki.page.startup"]);
+}
+</script><script type="text/javascript" src="API%20-%20%E7%99%BE%E6%80%9D%E4%B8%8D%E5%BE%97%E5%A7%90API_files/load.js"></script>
+</head>
+<body class="mediawiki ltr sitedir-ltr B_wiki_main  skin-monobook">
+
+
+<div class="op_header" id="pl_web_top">
+    <div class="global_top_header ">
+	    <div class="header_inner">
+	        <div class="header_wrapper">
+	            <div class="logo_container">
+	                <!--<a class="logo_link" href="http://www.520it.com" title="进入首页"><img class="logo_img" src="images/transparent.png" alt="Weibo Platform Logo"></a>-->
+	                <h1 class="hidden_title">百思不得姐</h1>
+	            </div>
+	            <div class="nav_list_container">
+	                <ul class="nav_list">
+                        <li class="nav_item nav_current">
+                            <a class="nav_link" href="API%20-%20%E7%99%BE%E6%80%9D%E4%B8%8D%E5%BE%97%E5%A7%90API.html" title="">文档</a>
+                        </li>
+	                </ul>
+	            </div>
+	            <!--登录Start-->
+	            <!--<div class="pull_right">-->
+	                                    <!--<div class="login_link_container">-->
+                    	<!--<a class="login_link" node-type="login_btn" href="javascript:;" title="">登录</a>-->
+                    <!--</div>-->
+	                	            <!--</div>-->
+	            <!--登录End-->
+	            <!-- 美国用户logo右边 -->
+	            	        </div>
+	    </div>
+	</div>
+</div>
+
+<!--主内容开始-->
+<div class="wiki_wrap">
+	<div class="wiki_con">
+    	<div class="con_box">
+        	<div class="header noprint">
+            	<a href="http://open.weibo.com/wiki/" title="开发文档" class="wiki_logo">开发文档</a>
+            </div>
+            <div class="wiki_body">
+            	<div class="wiki_inner">
+					                	<div class="main_content clearfix">
+                		<div class="wiki_side noprint">
+                        	<!--左侧导航-->
+							<div id="pl_web_wikiNav" class="wiki_nav">
+                                <!--<form class="nav_search clearfix" action="/wiki/index.php">-->
+                                    <!--<input name="title" value="特殊:搜索" type="hidden">-->
+                                    <!--<span class="input_wrap"><input name="search" title="在微博API中搜索 [ctrl-f]" accesskey="f" class="ser_input" node-txt="搜索" node-type="search"></span>-->
+                                    <!--<input name="fulltext" value="搜索" title="搜索含这些文字的页面" class="search_btn" type="submit">                                </form>-->
+                                <ul class="nav_list">
+									<li class="n_top ">
+	<h3 action-type="folder"><a href="API%20-%20%E7%99%BE%E6%80%9D%E4%B8%8D%E5%BE%97%E5%A7%90API.html"><em class="wiki_icon icon_首页"></em><span class="txt">首页</span>	</a></h3>	</li>
+
+	<li class="n_top" id="p-tb">
+		<h3><em class="wiki_icon icon_wkQus"></em><span class="txt">工具箱</span><em class="nav_arr"></em></h3>
+		<ul class="child_list" style="background:none"><li id="t-whatlinkshere" class="n_sub"><a href="http://open.weibo.com/wiki/%E7%89%B9%E6%AE%8A:%E9%93%BE%E5%85%A5%E9%A1%B5%E9%9D%A2/API" title="所有链入本页的wiki页面列表 [j]" accesskey="j">链入页面</a></li><li id="t-recentchangeslinked" class="n_sub"><a href="http://open.weibo.com/wiki/%E7%89%B9%E6%AE%8A:%E9%93%BE%E5%87%BA%E6%9B%B4%E6%94%B9/API" title="本页链入的页面的最近更改 [k]" accesskey="k">链出更改</a></li><li id="t-specialpages" class="n_sub"><a href="http://open.weibo.com/wiki/%E7%89%B9%E6%AE%8A:%E7%89%B9%E6%AE%8A%E9%A1%B5%E9%9D%A2" title="所有特殊页面列表 [q]" accesskey="q">特殊页面</a></li><li class="n_sub"><a href="http://open.weibo.com/wiki/index.php?title=API&amp;printable=yes" rel="alternate">可打印版</a></li><li id="t-permalink" class="n_sub"><a href="http://open.weibo.com/wiki/index.php?title=API&amp;oldid=14322" title="本页面该修订版本的永久链接">永久链接</a></li>		</ul>
+	</li>
+								</ul>
+								<ul class="quick_nav">
+									                                </ul>
+							</div>
+                            <!--/左侧导航结束-->
+                        </div>
+                    	<div class="wiki_bodyContent" id="bodyContent">
+																				<div id="mw-js-message" class="js-messagebox" style="display:none"></div>
+																					<div id="jump-to-nav">跳转到： <a href="#column-one">导航</a>, <a href="#searchInput">搜索</a></div>
+							<div dir="ltr" class="mw-content-ltr" lang="zh-cn"><h2 class="wiki_title"> <span class="mw-headline" id=".E5.BE.AE.E5.8D.9AAPI">百思不得姐API</span></h2>
+<div class="wiki_kit">
+	<div class="wiki_taglist">
+		<ul class="clearfix">
+			<!--<li><a href="#.E7.B2.89.E4.B8.9D.E6.9C.8D.E5.8A.A1.E6.8E.A5.E5.8F.A3">粉丝服务接口</a></li>-->
+            <li><a href="#.E5.BE.AE.E5.8D.9A">帖子接口</a></li>
+			<li><a href="#.E7.94.A8.E6.88.B7">广告接口</a></li>
+
+		</ul>
+	</div>
+	<!--<p class="tips_txt">标识为 <a href="http://open.weibo.com/wiki/%E9%AB%98%E7%BA%A7%E6%8E%A5%E5%8F%A3%E7%94%B3%E8%AF%B7" title="高级接口申请"><span class="wiki_icon_pro"></span></a> 的接口为高级权限接口，需要申请才可以调用，申请方式请见 <a href="http://open.weibo.com/wiki/%E9%AB%98%E7%BA%A7%E6%8E%A5%E5%8F%A3%E7%94%B3%E8%AF%B7" title="高级接口申请">高级接口申请</a></p>-->
+	<!--<p class="tips_txt">标识为 <a href="http://open.weibo.com/wiki/Scope" title="Scope"><span class="wiki_icon_safe"></span></a> 的接口为需要单独向用户提出SCOPE授权请求的接口，用户单独授权后才可以调用，具体使用方法请见 <a href="http://open.weibo.com/wiki/Scope" title="Scope">SCOPE</a></p>-->
+</div>
+<p><br>
+</p>
+
+<table class="wiki_table" border="0" cellpadding="0" cellspacing="0" width="100%">
+    <colgroup><col class="tbF1"><col class="tbF2"><col></colgroup>
+    <tbody><tr>
+        <th colspan="3" scope="col"><span id=".E5.BE.AE.E5.8D.9A">帖子</span>
+        </th></tr>
+    <tr>
+        <td rowspan="12" style="text-align:center;">读取接口
+        </td>
+        <td><a href="%E7%99%BE%E6%80%9D%E4%B8%8D%E5%BE%97%E5%A7%90-%E7%B2%BE%E5%8D%8E%E5%85%A8%E9%83%A8API.html" title="2/statuses/public timeline">api/api_open</a>
+        </td>
+        <td>获取自定义类型的帖子
+        </td></tr>
+
+    <tr>
+        <td><a href="%E7%99%BE%E6%80%9D%E4%B8%8D%E5%BE%97%E5%A7%90-%E6%A0%87%E7%AD%BE%E8%AE%A2%E9%98%85API.html" title="2/statuses/friends timeline/ids">api/api_open</a>
+        </td>
+        <td>获取标签订阅列表
+        </td></tr>
+    <tr>
+        <td><a href="%E7%99%BE%E6%80%9D%E4%B8%8D%E5%BE%97%E5%A7%90-%E6%8E%A8%E8%8D%90%E6%A0%87%E7%AD%BEAPI.html" title="2/statuses/user timeline">api/api_open</a>
+        </td>
+        <td>获取标签订阅中推荐标签列表
+        </td></tr>
+    <tr>
+        <td><a href="%E7%99%BE%E6%80%9D%E4%B8%8D%E5%BE%97%E5%A7%90-%E6%8E%A8%E8%8D%90%E5%85%B3%E6%B3%A8%E5%88%97%E8%A1%A8API.html" title="2/statuses/user timeline/ids">api/api_open</a>
+        </td>
+        <td>获取默认进入“推荐关注”后右侧板块显示的用户数据内容
+        </td></tr>
+    <tr>
+        <td><a href="%E7%99%BE%E6%80%9D%E4%B8%8D%E5%BE%97%E5%A7%90-%E6%8E%A8%E8%8D%90%E5%85%B3%E6%B3%A8%E6%A0%87%E7%AD%BEAPI.html" title="2/statuses/user timeline/ids">api/api_open</a>
+        </td>
+        <td>获取“推荐关注”中左侧标签的列表
+        </td></tr>
+    <tr>
+        <td><a href="%E7%99%BE%E6%80%9D%E4%B8%8D%E5%BE%97%E5%A7%90-%E6%8E%A8%E8%8D%90%E5%85%B3%E6%B3%A8%E6%A0%87%E7%AD%BE%E8%AF%A6%E6%83%85API.html" title="2/statuses/user timeline/ids">api/api_open</a>
+        </td>
+        <td>获取“推荐关注”中左侧标签每个标签对应的推荐用户组
+        </td></tr>
+    <tr>
+        <td><a href="%E7%99%BE%E6%80%9D%E4%B8%8D%E5%BE%97%E5%A7%90%20-%20%E6%B4%BB%E5%8A%A8%E9%A6%96%E9%A1%B5API.html" title="2/statuses/repost timeline/ids">api/api_open</a>
+        </td>
+        <td>获取“我”板块“活动”中的内容
+        </td></tr>
+    <tr>
+        <td><a href="%E7%99%BE%E6%80%9D%E4%B8%8D%E5%BE%97%E5%A7%90%20-%20%E6%AF%8F%E6%97%A5%E7%A6%8F%E5%88%A9API.html" title="2/statuses/mentions">api/api_open</a>
+        </td>
+        <td>获取“我”板块“每日福利”中的内容
+        </td></tr><tr>
+    <td><a href="%E7%99%BE%E6%80%9D%E4%B8%8D%E5%BE%97%E5%A7%90-%20%E9%9A%8F%E6%9C%BA%E7%A9%BF%E8%B6%8AAPI.html" title="2/statuses/mentions">api/api_open</a>
+        </td>
+        <td>获取“我”板块“随机穿越”中的内容
+        </td></tr><tr>
+    <td><a href="%E7%99%BE%E6%80%9D%E4%B8%8D%E5%BE%97%E5%A7%90%20-%20%E2%80%9C%E6%88%91%E2%80%9D%E6%9D%BF%E5%9D%97%E4%B8%AD%E5%85%B6%E5%AE%83API.html" title="2/statuses/mentions">api/api_open</a>
+        </td>
+        <td>打开程序后点击“我”板块获取到的内容
+        </td></tr><tr>
+    <td><a href="百思不得姐-帖子的“评论”详情页.html" title="2/statuses/mentions">api/api_open</a>
+    </td>
+    <td>获取进入帖子“评论”详情页所展示的内容
+    </td></tr>
+
+    <tr>
+        <td><a href="百思不得姐-帖子的“评论”详情页“更多点赞的人”部分.html" title="2/statuses/mentions">api/api_open</a>
+        </td>
+        <td>获取帖子的“评论”详情页"更多点赞的人"部分的内容
+        </td></tr>
+
+<table class="wiki_table" border="0" cellpadding="0" cellspacing="0" width="100%">
+<colgroup><col class="tbF1"><col class="tbF2"><col></colgroup>
+<tbody><tr>
+<th colspan="3" scope="col"><span id=".E7.94.A8.E6.88.B7">广告</span>
+</th></tr>
+<tr>
+<td rowspan="2" style="text-align:center;">读取接口
+</td>
+
+    <td><a href="%E7%99%BE%E6%80%9D%E4%B8%8D%E5%BE%97%E5%A7%90%20-%20%E5%B9%BF%E5%91%8AAPI.html" title="2/statuses/friends timeline">ad/get</a>
+    </td>
+    <td>每次进入程序时展现的广告界面
+    </td>
+</tr>
+<tr>
+    <td><a href="%E7%99%BE%E6%80%9D%E4%B8%8D%E5%BE%97%E5%A7%90%20-%20%E8%BD%AE%E6%92%AD%E5%9B%BE%E5%B9%BF%E5%91%8AAPI.html" title="2/statuses/home timeline">api/api_open</a>
+    </td>
+    <td>进入到主页面后的轮播图广告
+    </td></tr>
+
+
+</tbody></table>
+<p>
+</p>
+<!--<p class="tips_txt">如果你还在使用 <a href="http://open.weibo.com/wiki/API%E6%96%87%E6%A1%A3" title="API文档">旧版接口</a>，请立即升级迁移到V2版接口上，<a href="http://open.weibo.com/wiki/V1_To_V2" title="V1 To V2">V1到V2接口迁移指南</a> 将帮助你完成迁移。</p>-->
+<!--<p><br>-->
+<!--</p><p><br>-->
+<!--@NOBTNS--><!--@NOHEADING-->
+</p>
+<!-- 
+NewPP limit report
+Preprocessor node count: 127/1000000
+Post-expand include size: 1442/2097152 bytes
+Template argument size: 0/2097152 bytes
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key wiki:pcache:idhash:1843-0!*!0!*!*!*!* and timestamp 20150612081548 -->
+<div class="printfooter">
+来自“<a href="http://open.weibo.com/wiki/index.php?title=API&amp;oldid=14322">http://api.budejie.com/api/api_open.php&amp;oldid=14322</a>”</div>
+							<div id="catlinks" class="catlinks catlinks-allhidden"></div>														<div class="wiki_plus_area_bottom"> 文档更新时间: 2015-06-15</div>						</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--/主内容开始-->
+
+<!--统一底导结构-->
+<!--<div class="op_footer">-->
+<!--<div class="inner">-->
+    <!--<p class="links">-->
+		<!--<a href="http://open.weibo.com/wiki/index.php/%E5%85%B3%E4%BA%8E%E5%BC%80%E6%94%BE%E5%B9%B3%E5%8F%B0">关于微博开放平台</a><span class="W_vline">|</span>-->
+		<!--<a href="http://open.weibo.com/wiki/%E8%81%94%E7%B3%BB%E6%88%91%E4%BB%AC">联系我们</a><span class="W_vline">|</span>-->
+		<!--<a href="http://open.weibo.com/wiki/%E5%BC%80%E5%8F%91%E8%80%85%E5%8D%8F%E8%AE%AE">服务条款</a><span class="W_vline">|</span>-->
+		<!--<a href="http://weibo.com/weibovc">开发者基金</a><span class="W_vline">|</span>-->
+		<!--<a href="http://open.weibo.com/game">微游戏</a><span class="W_vline">|</span>-->
+		<!--<a href="http://open.weibo.com/blog/">平台博客</a>-->
+	<!--</p>-->
+    <!--<p class="copyright W_textb">-->
+		<!--<span>京网文 [2011] 0398-130号</span>-->
+		<!--<span>京ICP证100780号</span>-->
+		<!--<span>Copyright © 1996-2015 SINA</span>-->
+	<!--</p>-->
+<!--</div>-->
+<!--</div>-->
+<!--/统一底导结构-->
+
+
+<script type="text/javascript" src="API%20-%20%E7%99%BE%E6%80%9D%E4%B8%8D%E5%BE%97%E5%A7%90API_files/gaea_1_19.js"></script>
+<script type="text/javascript" src="API%20-%20%E7%99%BE%E6%80%9D%E4%B8%8D%E5%BE%97%E5%A7%90API_files/wiki.js"></script>
+<script>if(window.mw){
+	mw.loader.load(["mediawiki.user", "mediawiki.util", "mediawiki.page.ready", "mediawiki.legacy.wikibits", "mediawiki.legacy.ajax"]);
+}
+</script><script type="text/javascript" src="API%20-%20%E7%99%BE%E6%80%9D%E4%B8%8D%E5%BE%97%E5%A7%90API_files/load_002.js"></script>
+<script>if(window.mw){
+	mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"monobook","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,
+	"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"variant":"zh-cn","language":"zh-cn","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false});;mw.user.tokens.set({"editToken":"+\\","watchToken":false});;mw.loader.state({"user.options":"ready","user.tokens":"ready"});
+	
+	/* cache key: wiki:resourceloader:filter:minify-js:4:42c4e9caefe8ca663d220ee0c286ac74 */
+}
+</script><!-- Served in 0.534 secs. --><noscript>
+<img width="0" height="0" src="http://beacon.sina.com.cn/a.gif?noScript" border="0" alt="" />
+</noscript>
+<script type="text/javascript" charset="utf-8">
+(function() {
+    var doc = document,
+    wa = doc.createElement('script'),
+    s = doc.getElementsByTagName('script')[0];
+    wa.type = 'text/javascript';
+    wa.charset = 'utf-8';
+    wa.async = true;
+    wa.src = 'http://js.t.sinajs.cn/open/analytics/js/suda.js?version=1.1.2.396';
+    s.parentNode.insertBefore(wa, s);
+})();
+</script><div id="xunlei_com_thunder_helper_plugin_d462f475-c18e-46be-bd10-327458d045bd"></div></body></html>
